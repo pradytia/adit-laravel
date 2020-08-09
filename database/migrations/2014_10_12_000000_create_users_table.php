@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->increment('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -28,15 +28,6 @@ class CreateUsersTable extends Migration
 
         DB::table('users')->insert([
             'id' => 1,
-            'name' => 'adit',
-            'email' => 'adit@gmail.com',
-            'email_verified_at' => null,
-            'password' => bcrypt('123'),
-            'remember_token' => Str::random(60),
-            'role' => 'user'
-        ],
-        [
-            'id' => 2,
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'email_verified_at' => null,
@@ -46,6 +37,15 @@ class CreateUsersTable extends Migration
         ],
         [
             'id' => 2,
+            'name' => 'adit',
+            'email' => 'adit@gmail.com',
+            'email_verified_at' => null,
+            'password' => bcrypt('123'),
+            'remember_token' => Str::random(60),
+            'role' => 'user'
+        ],
+        [
+            'id' => 3,
             'name' => 'admin2',
             'email' => 'admin@gmail.com',
             'email_verified_at' => null,
