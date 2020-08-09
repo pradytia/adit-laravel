@@ -20,9 +20,9 @@ class ProductController extends Controller
    }
 
    public function delete($product_id){
-    $deleteProduct = modelProduct::find($product_id);
-    $deleteProduct->delete();
-    return redirect('/product');
+        $deleteProduct = modelProduct::find($product_id);
+        $deleteProduct->delete();
+        return redirect('/product');
 
     }
 
