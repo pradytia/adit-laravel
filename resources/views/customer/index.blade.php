@@ -10,7 +10,7 @@
 								<div class="panel-heading">
                                     <h3 class="panel-title"><i class="lnr lnr-menu"></i>Table Customer</h3>
                                     <div class="right">
-                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i> ADD</button>
+                                        <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i> ADD</button>
                                     </div>
 								</div>
 								<div class="panel-body">

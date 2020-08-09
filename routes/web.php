@@ -14,21 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/test', function () {
-    return 'testing brother';
-});
+Route::get('/login', 'AuthController@login')->name('login');
+Route::get('/logout', 'AuthController@logout');
+Route::post('/postlogin', 'AuthController@postlogin');
 
-Route::get('/content', 'ContentsController@index');
 
-Route::get('/customer', 'CustomerController@index');
-
-Route::post('/customer/create', 'CustomerController@create');
-
-Route::get('/customer/{customer_id}/delete', 'CustomerController@delete');
-
-Route::get('/customer/{customer_id}/edit', 'CustomerController@edit');
-
-Route::post('/customer/{customer_id}/update', 'CustomerController@update');
+Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
+Route::get('/content', 'ContentsController@index')->middleware('auth');
+Route::get('/customer', 'CustomerController@index')->middleware('auth');
+Route::post('/customer/create', 'CustomerController@create')->middleware('auth');
+Route::get('/customer/{customer_id}/delete', 'CustomerController@delete')->middleware('auth');
+Route::get('/customer/{customer_id}/edit', 'CustomerController@edit')->middleware('auth');
+Route::post('/customer/{customer_id}/update', 'CustomerController@update')->middleware('auth');
