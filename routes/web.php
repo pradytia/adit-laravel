@@ -24,3 +24,11 @@ Route::get('/test', function () {
 Route::get('/content', 'ContentsController@index');
 
 Route::get('/customer', 'CustomerController@index');
+
+Route::post('/customer/create', 'CustomerController@create');
+
+Route::get('/customer/{customer_id}/delete', 'CustomerController@delete');
+
+Route::get('/customer/{customer_id}/edit', 'CustomerController@edit');
+
+Route::post('/customer/{customer_id}/update', 'CustomerController@update');

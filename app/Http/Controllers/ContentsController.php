@@ -11,4 +11,5 @@ class ContentsController extends Controller
         $data = Content::get();
         return view('contents/index', compact('data'));
     }
+
 }
