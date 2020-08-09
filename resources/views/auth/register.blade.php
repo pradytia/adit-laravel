@@ -33,8 +33,12 @@
 								<div class="logo text-center"><img src="{{asset('admin/assets/img/apple-icon.png')}}" alt="Klorofil Logo"></div>
 								<p class="lead">Register</p>
 							</div>
-                            <form class="form-auth-small" action="/postlogin" method="POST">
+                            <form class="form-auth-small" action="/postregister" method="POST">
                                 {{csrf_field()}}
+								<div class="form-group">
+									<label for="signin-email" class="control-label sr-only">Username</label>
+									<input name="name" type="text" class="form-control" id="signin-email" placeholder="name">
+								</div>
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>
 									<input name="email" type="email" class="form-control" id="signin-email" placeholder="Email">

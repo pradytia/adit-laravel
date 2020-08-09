@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -28,5 +29,17 @@ class AuthController extends Controller
 
     function register(){
         return view('auth/register');
+    }
+
+    function postregister(Request $request){
+
+        $user = new \App\User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->remember_token = Str::random(60);
+        $user->role = 'user';
+        $user->save();
+        return redirect('/dashboard')->with('alert', 'Berhasil!');
     }
 }

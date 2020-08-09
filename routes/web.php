@@ -21,7 +21,8 @@ Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 
-// Route::get('/register', 'AuthController@register');
+Route::get('/register', 'AuthController@register');
+Route::post('/postregister', 'AuthController@postregister');
 
 Route::group(['middleware'=>'auth'], function(){
 
