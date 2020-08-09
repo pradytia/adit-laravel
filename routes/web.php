@@ -18,8 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'AuthController@login')->name('login');
-Route::get('/logout', 'AuthController@logout');
 Route::post('/postlogin', 'AuthController@postlogin');
+Route::get('/logout', 'AuthController@logout');
+
+// Route::get('/register', 'AuthController@register');
 
 Route::group(['middleware'=>'auth'], function(){
 
@@ -33,5 +35,8 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('/customer/{customer_id}/update', 'CustomerController@update');
     
     Route::get('/product', 'ProductController@index');
+    Route::post('/product/create', 'ProductController@create');
     Route::get('/product/{product_id}/edit', 'ProductController@edit');
+    Route::get('/product/{product_id}/delete', 'ProductController@delete');
+    Route::post('/product/{product_id}/update', 'ProductController@update');
 });

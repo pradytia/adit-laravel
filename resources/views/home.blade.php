@@ -29,11 +29,11 @@
     </style>
 </head>
 <body>
-<div class="container mt-5 py-5 px-5">			
+<div class="container mt-5 ">			
 		<!-- membuat jumbotron -->
 		<div class="jumbotron py-5">
 			<center>			
-				<h2>Selamat datang di Toko Adit</h2>
+				<h2>Selamat datang di Toko Kelontong</h2>
 				<p>Untuk melanjutkan silahkan login</p><br/><br/>
 				<p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a></p>
 			</center>

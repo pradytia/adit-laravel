@@ -15,7 +15,7 @@ class AuthController extends Controller
 
         // dd($request->all());
         if(Auth::attempt($request->only('email', 'password'))){
-            return redirect('/dashboard');
+            return redirect('/dashboard')->with('alert', 'Berhasil!');
         }else{
             return redirect('/login');
         }
@@ -24,5 +24,9 @@ class AuthController extends Controller
     function logout(){
         Auth::logout();
         return redirect('/login');
+    }
+
+    function register(){
+        return view('auth/register');
     }
 }

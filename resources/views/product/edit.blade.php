@@ -8,10 +8,10 @@
                     <div class="col-md-12">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h1>Edit Data Product {{ $editProduct->customer_name}}</h1>
+                                <h1>Edit Data Product {{ $editProduct->product_name}}</h1>
                             </div>
                             <div class="panel-body">
-                                <form action="/customer/{{ $editProduct->product_id }}/update" method="POST">
+                                <form action="/product/{{ $editProduct->product_id }}/update" method="POST">
                                 {{csrf_field()}}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Product Name</label>

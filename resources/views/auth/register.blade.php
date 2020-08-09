@@ -2,7 +2,7 @@
 <html lang="en" class="fullscreen-bg">
 
 <head>
-	<title>Login | Toko Adit</title>
+	<title>Register | Toko Adit</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -31,7 +31,7 @@
 						<div class="content">
 							<div class="header">
 								<div class="logo text-center"><img src="{{asset('admin/assets/img/apple-icon.png')}}" alt="Klorofil Logo"></div>
-								<p class="lead">Login to your account</p>
+								<p class="lead">Register</p>
 							</div>
                             <form class="form-auth-small" action="/postlogin" method="POST">
                                 {{csrf_field()}}
@@ -44,10 +44,7 @@
 									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
 								</div>
 
-								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-								<!-- <div class="bottom">
-									<span class="helper-text"><i class="fa fa-lock">Don't have account ?</i> <a href="/register">register</a></span>
-								</div> -->
+								<button type="submit" class="btn btn-success btn-lg btn-block">REGISTER</button>
 							</form>
 						</div>
 					</div>
