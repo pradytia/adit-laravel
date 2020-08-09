@@ -8,6 +8,7 @@
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
 									<li><a href="/customer" class=""><i class="lnr lnr-file-empty"></i> <span>Customer</a></li>
+									<li><a href="/product" class=""><i class="lnr lnr-file-empty"></i> <span>Product</a></li>
 								</ul>
 							</div>
 						</li>

@@ -10,14 +10,19 @@
 								<div class="panel-heading">
                                     <h3 class="panel-title"><i class="lnr lnr-menu"></i>Table Customer</h3>
                                     <div class="right">
+                                    @if(auth()->user()->role == 'admin')
                                         <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i> ADD</button>
+                                    @endif
                                     </div>
 								</div>
 								<div class="panel-body">
-									<table class="table table-bordered table-hover mt-5" id="customer_table">
+                                    <div class="table-responsive">
+                                    <table class="table table-bordered table-hover mt-5" id="customer_table">
 										<thead>
                                         <tr>
+                                        @if(auth()->user()->role == 'admin')
                                             <th>Action</th>
+                                        @endif
                                             <th>CustomerID</th>
                                             <th>Customer_Name</th>
                                             <th>Customer_Address</th>
@@ -29,10 +34,12 @@
 										<tbody>
                                             @foreach($data_customer as $d)
                                                 <tr>
+                                                @if(auth()->user()->role == 'admin')
                                                     <td>
                                                         <a href="/customer/{{ $d->customer_id }}/edit"  class="btn btn-warning btn-sm btn-edit"><i class="fa fa-edit"></i></a>
                                                         <a href="/customer/{{ $d->customer_id }}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau hapus ?')"><i class="fa fa-trash"></i></a>
                                                     </td>
+                                                @endif
                                                     <td>{{ $d->customer_id }}</td>
                                                     <td>{{ $d->customer_name }}</td>
                                                     <td>{{ $d->customer_address }}</td>
@@ -43,6 +50,7 @@
                                             @endforeach
 										</tbody>
 									</table>
+                                    </div>
 								</div>
 								<!-- <div class="panel-footer">
 									<div class="row">

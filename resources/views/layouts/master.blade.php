@@ -58,7 +58,8 @@
 
     $(document).ready(function () {
 
-        var datatable =  $('#customer_table').DataTable({});
+        var datatable_customer =  $('#customer_table').DataTable({});
+		var datatable_product =  $('#product_table').DataTable({});
 
     });
 </script>
