@@ -34,11 +34,11 @@ class AuthController extends Controller
 
     function postregister(Request $request){
 
-        $now = Carbon::now();
-        $unique_code = $now->format('YmdHisu');
+        // $now = Carbon::now();
+        // $unique_code = $now->format('YmdHisu');
 
         $user = new \App\User;
-        $user->id = $unique_code;
+        $user->id = '2';
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
