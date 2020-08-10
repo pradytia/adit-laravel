@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateCustomerTable extends Migration
 {
@@ -20,6 +21,12 @@ class CreateCustomerTable extends Migration
             $table->string('gender');
             $table->timestamps();
         });
+
+        DB::table('customer')->insert([
+            'customer_name' => 'Andi',
+            'customer_address' => 'Tangerang',
+            'gender' => 'L',
+        ]);
     }
 
     /**
