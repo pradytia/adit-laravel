@@ -44,8 +44,8 @@
                                                     <td>{{ $d->customer_name }}</td>
                                                     <td>{{ $d->customer_address }}</td>
                                                     <td>{{ $d->gender }}</td>
-                                                    <td>{{ $d->created_at->format('d/M/Y') }}</td>
-                                                    <td>{{ $d->updated_at->format('d/M/Y') }}</td>
+                                                    <td>{{ $d->created_at->format('d/M/Y') ? $d->created_at->format('d/M/Y') : null }}</td>
+                                                    <td>{{ $d->updated_at->format('d/M/Y') ? $d->updated_at->format('d/M/Y') : null }}</td>
                                                 </tr>
                                             @endforeach
 										</tbody>

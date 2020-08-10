@@ -45,8 +45,8 @@
                                                     <td>{{ $d->product_name }}</td>
                                                     <td>{{ $d->product_description }}</td>
                                                     <td class="text-center"><img src="{{ $d->product_image }}" style="width: 50px; height: 50px;"/></td>
-                                                    <td>{{ $d->created_at->format('d/M/Y') }}</td>
-                                                    <td>{{ $d->updated_at->format('d/M/Y') }}</td>
+                                                    <td>{{ $d->created_at->format('d/M/Y') ? $d->created_at->format('d/M/Y') : null }}</td>
+                                                    <td>{{ $d->updated_at->format('d/M/Y') ? $d->updated_at->format('d/M/Y') : null }}</td>
                                                 </tr>
                                             @endforeach
 										</tbody>
